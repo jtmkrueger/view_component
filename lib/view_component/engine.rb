@@ -17,9 +17,12 @@ module ViewComponent
       options.preview_controller ||= ViewComponent::Base.preview_controller
 
       if options.show_previews
-        options.preview_paths << "#{Rails.root}/test/components/previews" if defined?(Rails.root) && (
-          Dir.exist?("#{Rails.root}/test/components/previews") || Dir.exist?("#{Rails.root}/spec/components/previews")
+        options.preview_paths << "#{Rails.root}/test/components/previews" if defined?(Rails.root) && Dir.exist?(
+          "#{Rails.root}/test/components/previews")
         )
+        options.preview_paths << "#{Rails.root}/spec/components/previews" if defined?(Rails.root) && Dir.exist?(
+          "#{Rails.root}/spec/components/previews"
+         )
 
         if options.preview_path.present?
           ActiveSupport::Deprecation.warn(
