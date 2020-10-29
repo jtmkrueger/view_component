@@ -21,8 +21,8 @@ module ViewComponent
           "#{Rails.root}/test/components/previews")
         )
         options.preview_paths << "#{Rails.root}/spec/components/previews" if defined?(Rails.root) && Dir.exist?(
-          "#{Rails.root}/spec/components/previews"
-         )
+          "#{Rails.root}/spec/components/previews")
+        )
 
         if options.preview_path.present?
           ActiveSupport::Deprecation.warn(
