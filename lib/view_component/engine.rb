@@ -20,7 +20,7 @@ module ViewComponent
         options.preview_paths << "#{Rails.root}/test/components/previews" if defined?(Rails.root) && Dir.exist?(
           "#{Rails.root}/test/components/previews"
         )
-        options.preview_paths << "#{Rails.root}/spec/components/previews" if defined?(Rails.root) && Dir.exist?(
+        options.preview_paths << "#{Rails.root}/test/components/previews" if defined?(Rails.root) && Dir.exist?(
           "#{Rails.root}/spec/components/previews"
         )
 
